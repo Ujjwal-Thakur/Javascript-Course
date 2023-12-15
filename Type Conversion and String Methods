@@ -1,0 +1,36 @@
+//-------------------------------------------type conversion:------------------------------------------------------
+
+let a = 45;
+console.log(a);       //print 45
+console.log(typeof a);    //print data type of a ie. "number"
+console.log(typeof String(a));    //number is converted into String using "String(a)" method; it will print "String"
+
+let b = 555;
+console.log(b);      
+console.log(typeof b);        //print number
+b= b.toString();              //another method to convert into String "toString" 
+console.log(typeof b);        // It will print data type of b ie. "String"
+
+//------------------------------------------Some common String Methods---------------------------------------------
+
+let s= "My name is Aditya";
+console.log(s[11]);                     //will print the character at 11th index of the String ie. "A". Index start from 0;
+console.log(s.indexOf("A"));           //"indexOf" method is used to find the index of specified character.  
+console.log(s.indexOf("a"));            //"indexOf" method will give the index of first instance of the specified character only
+console.log(s.lastIndexOf("a"));        //to get the last index of the specified character if it is present multiple times, then the method "lastIndexOf" is used
+console.log(s.indexOf("Aditya"));       //if we pass a string to "indexOf" method, then it will return the index of first character only
+console.log(s.charAt(11));              //"charAt" is same as "s[]", It will return the char at the specified position
+console.log(s.endsWith("Aditya"));      //"endsWith" method tells us whether the string ends with the specified string.It returns true or false. In this case it will return true
+console.log(s.endsWith("name"));        //In this case , it will return false as the string is not ending with  "name"
+console.log(s.includes("name"));        //"includes" method tells us whether the specified string is a part of the given string or not. It also returns true or false
+console.log(s.includes("Ujjwal"));      //returns false as Ujjwal is not present in the string
+console.log(s.substring(3,6));          //"substring" method will return the string from specified index to the previous of last specified index
+console.log(s.substring(6,3));          //It also return if the index is passed in reverse order .In this case it will return "nam"
+console.log(s.slice(6,3));              //"slice" method is also same as "substring" but difference is that it does not return if the index is passed in reverse order.
+console.log(s.substr(3,4));             //"substr" method has 2 parameter 1st is starting index and 2nd is the length. It will print the string from the specified starting index and the string of specifien length.
+console.log(s.split(" "));              //"split" method converts string into a array or list, it splits string from every specified parameter. In this case it will split from every space.
+console.log(s.split("a"));
+console.log(s.replace("Aditya","Ujjwal"));  //It will replace the given Aditya to Ujjwal
+console.log(s.length);                  //returns the length of the string         
+console.log(s.toLowerCase());            //converts the string to lowercase
+console.log(s.toUpperCase());            //converts the string to UPPERCASE

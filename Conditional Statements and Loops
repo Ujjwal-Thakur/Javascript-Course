@@ -1,0 +1,61 @@
+//--------------------------------------------Confitional Statements and Loops:-------------------------------------
+
+let num = Number(prompt("Enter a Number: "));
+console.log(`Your number is: ${num}`);
+
+// "=== is an strict coparison operator that also checks whether the data type of both variables is also same or not"
+ let x = "100";
+ if(num===x){
+    console.log("Same");
+ }
+ else{
+    console.log("Not Same");
+ }
+ //Here out will be "Not Same" as the nu is a Number and x is a String data type....
+
+ //------------------------------------If-else if Statements --------------------------------------------
+
+ if (num===100){
+    console.log("You got a red velvet cake...");
+ }
+ else if(num===50){
+    console.log("You got a butterscotch icecream..");
+ }
+ else{
+    console.log("Better luck next time:(");
+ }
+
+ //......................................SWITCH Statement>..............................................
+
+ switch(num)
+ {
+    case(1000):
+    console.log("You won a Video Game");
+    break;
+
+    case(500):
+    console.log("You won a toy car");
+    break;
+
+    default:
+        console.log("Better luck next time:)");
+ }   
+
+ //--------------------------------------->>LOOPS>>----------------------------------------------------
+
+ for(let i=0; i<10; i++){
+    console.log("Hello Ujjwal:)");
+ }
+
+ let j = 0;
+ while(j<10){
+    console.log("Hyyy Ujjwal...");
+    ++j;
+ }
+
+
+ let k=0;
+ do{
+   console.log("Hello guys...");
+   k++;
+ }while(k<5)

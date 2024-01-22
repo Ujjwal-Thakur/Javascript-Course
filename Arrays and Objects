@@ -1,0 +1,59 @@
+//-----------------------------------Arrays and Objects----------------------------------------->>>>>>>>
+
+//We can create different types of arrays in js:
+let arr = [1,2,3,4,5,6,7];                                //This is a normal array with single datatype
+let arr2 = ["Ujjwal", "Thakur"];                          //Char datatype array
+let arr3 = ["Ujjwal","Thakur",9,2001];                    //Multiple datatypes in a single array
+let arr4 = ["Ujjwal", "Thakur", [9,2001]];                //array inside array
+
+console.log(arr);
+console.log(arr2);
+console.log(arr3);
+console.log(arr4);
+
+//Arrays can also be initialized and changed as:
+let arr5 = [];
+arr5[0]=1;
+arr5[1]=10;
+arr5[2]=12;
+arr5[3]=15;
+console.log(arr5);
+
+// Array can also be initiallized as:
+arr6 = new Array(3)  //here array with 3 elements is created...
+arr7 = new Array(3,4,5)  //here array with elements 3,4,5 is created...
+console.log(arr6);
+console.log(arr7);
+
+
+//Some Methods in Array:------>>>>>
+let arr8 = [1,2,3,4,5,6,7,8,9,10];
+arr8.push(4);                    //push() adds the element at the last position in the array
+arr8.pop();                     //pop() removes the last element of the array
+arr8.shift();                  //shift() removes the first element of the array
+arr8.unshift(5);              //unshift() adds the element at the first position in the array
+arr8.splice(3, 3);              //splice() deletes multiple elements from the array. Parameters includes starting index from where you want to delete and how many elements you want to delete
+arr8.reverse();                  //reverse the array   
+
+let x = arr8.slice(2,4);            //slice makes another array from given starting index to last given index
+console.log(x);
+
+console.log(arr8.includes(10));         //returns true if given number is present in the array otherwise false
+console.log(arr8);
+
+//OBJECTS--------------->>>>>
+const myObj = {
+    name:"Ujjwal",
+    surname:"Thakur",
+    income:2000000,
+    male:true
+}
+
+console.log(myObj);
+console.log(myObj.name);
+//we can also change the data of the object:
+myObj.income = 5000000;
+
+//we can also add new data to object as:
+myObj.HomeState = "Himachal Pradesh";
+console.log(myObj);

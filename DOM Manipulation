@@ -1,0 +1,27 @@
+//<<<<<<<<<<<<<<<<<<--------------------------DOM Manipulation----------------------->>>>>>>>>>>>>>>>>>>>>>>>>
+
+const Mybtns = document.querySelectorAll("button");
+Mybtns[0].onclick = morningMessage;
+Mybtns[0].style.backgroundColor="grey";
+
+Mybtns[1].onclick = nightMessage;
+Mybtns[1].style.backgroundColor = "grey";
+
+function morningMessage(){
+    const message = document.createElement("h1");
+    message.innerText= "Good Morning :)";
+    document.body.prepend(message);
+}
+ 
+function nightMessage(){
+    const message = document.querySelector("h1");
+    message.remove();
+    const message2= document.createElement("h1");
+    message2.innerText= "Good Night";
+    document.body.append(message2);
+}
+
+// //There are many other methods like :
+// setAttributes();
+// getAttributes();
+// //and many more......

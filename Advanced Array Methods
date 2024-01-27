@@ -1,0 +1,89 @@
+//----------------------------------Advanced Array Methods---------------------------------.>>>>>>>>>>>>>>>>>>
+//Arrow function
+
+const myFunc = (a,b) => {
+    return a+b;
+}
+console.log(myFunc(2,3));
+//major difference between arrow function and normal function is that you need to define the arrow function before it is being called. (Hoisting)
+
+const MyFunc = (a,b) => {
+    console.log(a+b);
+}
+MyFunc(2,3);
+
+const arr = [2,4,6,8,10];
+ 
+const newFunc=(value, index)=>{
+    if(value>4){
+        console.log(value);
+    }
+}
+
+arr.find(newFunc);                   //find() function iterates the array...
+
+//we can also define the function directly inside the find function as:
+//But now in place of console.log we return the value in same function:
+
+const result = arr.find((value,index)=>{
+                    if(value > 4){
+                    return value;
+                    }
+                })
+
+console.log(result);                        //It will return only single value (not an array). It does not return array.
+//If we want to get array of every element greater than our condition as given in the code we can use filter()functio 
+
+const res = arr.filter((value,index) => {
+    if(value > 4){
+        return value;
+    }
+})
+
+console.log(res);           //this will return arr [6,8,10]. filter() works same as find but return array.
+
+const ans = arr.every((value,index) => {                            //every() function returns boolean value
+    return value>2;                                                 //it checks the consition for every element    
+})                                                          //like in this case it will check that every element is greater than 2, if yes then only it will return true otherwise false.
+
+console.log(ans);
+
+const answer = arr.some((value,index) => {              //some() function works same as every() function , but it returns true even if a single element is satisfying the condition.
+    return value>4;
+})
+
+console.log(answer);
+
+
+//---------for of loop---->>>>
+for (const value of arr){
+    console.log(value);
+}
+
+for (const x of arr){
+    console.log(x+3);
+}                                      //But this will not affect the original array as:
+console.log(arr);                   //it will print [2,4,6,8,10]
+
+arr.forEach((value,index)=>{
+    console.log(value);
+    console.log(index);
+})
+
+//these all methods will not affect the original array 
+//even if we store the function in an variable it will not give any answer as these returns single elements not the array
+const xyz = arr.forEach((value,index)=>{
+    return value+20;
+})
+console.log(xyz);
+
+//So in order to print the output we use map() function. map() creates another array and then we can print it. 
+
+const abc = arr.map((value,index)=>{
+    return value+20;
+})
+
+console.log(abc);
+console.log(arr);
+
+//Reduce() method is also an important method ...... 

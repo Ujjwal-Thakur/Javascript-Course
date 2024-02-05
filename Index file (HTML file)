@@ -10,8 +10,10 @@
     <div id="greet">Hiii...</div>
     <div class="name">I am Ujjwal Thakur</div>
     <div>How are you?</div>
+    <input type="text" placeholder="Waht are you doing?">
     <button type="button" id="btn">Morning</button>
     <button type="button">Night</button>
+    <button id="btn1" type="button" style="padding:20px; background-color: aquamarine; font-size: larger;">Click</button>
 </body>
 
 <!-- <script src="./index.js"></script> -->

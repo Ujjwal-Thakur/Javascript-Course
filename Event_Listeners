@@ -1,0 +1,69 @@
+// ------------------------Event Listeners--------------------------.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const myBtn = document.getElementById('btn');
+const Greet = document.getElementById('greet');
+const first_name = document.getElementsByClassName("name")[0];
+const input = document.querySelector("input");
+const btn1= document.getElementById("btn1");
+
+function func1 (){
+    console.log("Good Morning");
+}
+
+myBtn.addEventListener("click",func1)
+
+myBtn.addEventListener("mouseover",()=>{
+    Greet.style.fontSize="20px";
+    Greet.style.backgroundColor="beige";
+})
+myBtn.addEventListener("mouseout",()=>{
+    Greet.style.padding="";
+    Greet.style.fontSize="";
+    Greet.style.backgroundColor="";
+})
+
+// preventDefault() is used to prevent the default behaivour of the object
+// Like right click on button or anywhere will open a dropdown list of options it is a default behaviour
+// but if we use preventDefault() on button, then on right clicking the button it will not appear 
+
+myBtn.addEventListener("contextmenu",(e)=>{                 //contextmenu means right click and to use preventDefault() we need to pass a value as 'e' in this example
+    e.preventDefault();
+    myBtn.style.backgroundColor="grey";
+    myBtn.style.padding="1.5vmax";
+    myBtn.style.fontSize="bold";
+})
+
+//but the right click behaviour will remains same on other part of the document. In order to do that, we can use same preventDefault as:
+addEventListener("contextmenu",(e)=>{
+    e.preventDefault();
+    first_name.style.filter = "blur(5px)";
+})
+
+addEventListener("click",(e)=>{
+    console.log(e.clientX);             //will print X  coordinate of mouse position when it is clicked
+    console.log(e.clientY);             //will print X  coordinate of mouse position when it is clicked
+
+})
+
+addEventListener("dblclick",(e)=>{
+    e.preventDefault();
+    document.body.style.backgroundColor="#dde5b4";
+})
+
+input.addEventListener("change",(e)=>{              //change is used to change the value
+    console.log(e.target.value);                    //it will print the value of input field , target.value will help to write next thing you typed without removing the previous text you typed
+})
+
+/* There is also removeEventListener to remove the existing eventlistener, but here we need to pass the eventListener name 
+ that we want to remove and the function, because we can use multiple functions on a eventlistener , so to make it clear,
+which function we want to remove we need to pass the function name as well. */
+
+/* therefore we cant use removeEventListener on arrow function, because we dont have function name in this,
+it is an anonymous function.
+Or we can define a arrow function and store it in a variable then by doing this we can use the removeEventListener */
+
+btn1.addEventListener("click",()=>{
+    btn1.style.backgroundColor="#a98467";
+
+    myBtn.removeEventListener("click", func1);
+})

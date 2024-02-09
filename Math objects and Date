@@ -1,0 +1,58 @@
+//-------------------------MATH OBJECTS and DATE------------------------------->>>>>>>>>>>>>>>>>>
+
+const a = Math.round(4.6);                         //Math.round() will return the rouded off value
+console.log(a);
+
+console.log(Math.floor(4.5));                      //floor() function gives the nearest integer value less than or equal to the given decimal number.
+console.log(Math.ceil(4.5));                        //ceil() function gives the nearest integer value greater than or equal to the given nimber
+console.log(Math.trunc(32.34434));                  //trunc value gives the numebr before decimal.
+
+console.log(Math.sign(45));             //sign() function return 1 if given number is +ve or -1 if given number is -ve or 0 for 0
+
+console.log(Math.pow(2,5));         //pow() function will give the power. like in this case 2 raise to the power 5
+console.log(Math.sqrt(25));         //sqrt() function will return the square root of the number
+
+console.log(Math.abs(-12));         //return only the number without any sign
+
+console.log(Math.sin(90));          //sin() gives sign value . By default the parameter is taken as radians
+console.log(Math.sin((90 * Math.PI)/180));    //to convert into degrees ((degree*PI)/180)
+console.log(Math.sin((45 * Math.PI)/180));
+
+console.log(Math.max(23,23,243,43,523,412,4,234,324,2));     //return maximum of all the numebrs.
+console.log(Math.min(2,32,3,23,242,4,324,23,23,2,32,1221,12,3,23));  //returns minimum of all the numbers
+
+console.log(Math.random());             //returns  any random number between 0 and 1
+
+console.log(Math.log2(32));          //returns the base 2 logarithm of a number
+console.log(Math.log10(1000));
+
+
+//--------------------------------------------------------------DATE___________________>>>>>>>>>>>>>
+//4 ways to create a date...
+const a = new Date();               //Create a new date and here it will give today's date
+console.log (a);
+
+const b = new Date (2024, 11, 11, 02, 12 ,34);    //create a date by passing numbers as  yyyy, mm, dd, hh, min, seconds
+console.log(b);
+
+const c = new Date (2012);          //if we pass single parameter it considers it as miliseconds. and starting date as 1970 05:30
+console.log(c);
+
+const d = new Date ("Wed Dec 11 2024 02:12:34");   //creating date by passing a string
+console.log(d);
+
+console.log(new Date(2023, 12, 12));            //index of month starts from 0. so here it will adjusts 12 to next year jan
+console.log(new Date(23, 12, 12));          //if in year we give only 2 digits it will consider first 2 as 19. So here 1923.
+
+//some functions of DATE:
+
+console.log(a.getDate());    //get date ...
+console.log(a.getMonth());   //get month as specified in "a"
+console.log(a.getFullYear());        //get year as specified in "a"
+console.log(a.getHours());           //get hours as specified in "a"
+console.log(a.getMinutes());         //get minutes as specified in "a"
+
+console.log(b.setDate(2));               //set date in "b" . means it will add date by 2  and adjusts accordingly.if date becomes  more than 31 it will automatically adjusts to next nomth
+console.log(b.setMonth(40));
+console.log(b.setHours(21));
+

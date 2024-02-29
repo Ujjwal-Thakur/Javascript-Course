@@ -1,0 +1,30 @@
+
+//-----------------------------------Local Storage and Session Storage--------------.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const btn = document.getElementById('btn1');
+const btn1 = document.getElementById('btn1');
+const input = document.getElementById('input');
+
+const func = ()=> {
+    alert(input.value);
+    sessionStorage.setItem('key1',input.value);
+    console.log(sessionStorage.getItem("key1"));
+}
+
+btn.addEventListener('click',func);
+
+// //similarily these are some functions for session storage:
+// sessionStorage.removeItem("key1");        //it will remove the specified ket item
+// sessionStorage.clear();                     //it will remove all the items of the storage
+// sessionStorage.key(1);          //will return the ket present at the index
+// sessionStorage.length();                //it will give the length of the storage
+
+//Session storage is only for one session , if you open same site or page on other tab all data on session storage will not be present there.
+//it is only for one session.
+
+
+
+//--------------->>LOCALSTORAGE:::::
+// functions are same for localStorage and sessionStorage
+// but difference is that localStorage works for every tab and every browser.addEventListenerwhen you open the site in another tab or in another time it will save the data in browser's data.
+

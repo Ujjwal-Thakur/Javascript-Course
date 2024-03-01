@@ -22,6 +22,8 @@ btn.addEventListener('click',func);
 //Session storage is only for one session , if you open same site or page on other tab all data on session storage will not be present there.
 //it is only for one session.
 
+//JSON.stringify() and JSON.parse() are functions used to convert string into object and vice versa
+
 
 
 //--------------->>LOCALSTORAGE:::::

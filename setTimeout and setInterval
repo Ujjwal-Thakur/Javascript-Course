@@ -1,0 +1,45 @@
+//-------------------------------TIMEOUT and INTERVAL----------------->>>>>>>>>>>>>>>>>>>>>>>
+
+// const btn = document.getElementById('btn1');
+// const btn2 = document.getElementById('btn');
+
+// const print = (name, income)=>{
+//     console.log(`My name is ${name}. My salary is ${income}.`);
+// }
+
+
+//setTimeout() function is used to display the content after the specified time. here the time is measured in milliseconds
+// let timeoutId;
+
+// const setTime = () => {
+//     clearTimeout(timeoutId); // Clear previous timeout if any
+//     timeoutId = setTimeout(print, 5000, "Ujjwal", 10000);
+// }
+
+// btn.addEventListener('click', setTime);       
+
+//now clearTimeout() function . It will remove the effect of the setTimeout() function.
+//After using the cleatTimeout() function the setTimeout() function will not work for that particular id(instance).
+//and nothing will print after that for the given id.
+// btn.addEventListener('click',()=>{
+//     clearTimeout(setTime);
+// })
+
+
+//SET Interval()
+//This is used to print something after a particular time interval automatically.
+
+//syntax is same as setTimeout;
+
+// const print = (name)=>{
+//     const income = Math.floor(Math.random()*10000);
+//     console.log(`My name is ${name}. My salary is ${income}.`);
+// }
+// const setTime = () => {
+//     setInterval(print, 2000, "Ujjwal");
+// }
+
+
+// btn.addEventListener('click',setTime);
+
+//Similarily clearInterval(id) works as clearTimeout...

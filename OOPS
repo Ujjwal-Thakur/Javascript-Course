@@ -1,0 +1,110 @@
+-------------------------------OOPS in javascript-------------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*const a = {                     //object creation using object laterals means simply creating objects using curly braces and entering the fields of the objects.
+    name: "Ujjwal",
+    surname: "Thakur",
+}
+console.log(a);
+console.log(a.surname);
+
+//Number, String, Boolean, NULL, undefined are  primitive data types.
+//whereas objects are non primitive data types.
+
+//it can be changed in between the runtime as:
+console.log(a);
+
+a.age = 22;
+
+console.log(a);
+
+
+//Primitive data types are pass by value whereas  non primitive data types are pass by reference data types:
+
+let b = 20;
+let c = b;
+console.log(b);             // here the value is stored.
+console.log(c);             //here also the value of b is stored in c.
+b = 30;
+console.log(b);             
+console.log(c);             //therefore only the value of b is changed not the value of c. because c has its own value.
+
+
+const x = a;            //but here as objects are pass by reference so both the x and a refers or points to the memory address.
+console.log(a);
+console.log(x);
+
+x.name = "Aditya";        //if we change any of the variable both the value gets changed, as both are pointing to the same memory address.
+console.log(a);
+console.log(x);  
+
+//Normal way to make an object:
+const Ujjwal = {
+    height: 180,
+    weight: 66,
+    profession: ()=>{
+        console.log("Student");
+    }
+}
+
+console.log(Ujjwal);
+Ujjwal.profession(); 
+//but if we have a lot of objects then it is not feasible to change properties of each and every person again and again.
+//so we use this type of template.
+
+//This is called factory function....
+
+function person(height, weight, profession) {
+    return{
+        height: 180,
+        weight: 66,
+        profession: ()=>{
+            console.log("Student");
+        },
+    };
+}
+
+const Ujjwal = person(180, 66,"student");
+const Vaibhav = person(172, 56,"student");
+console.log(Ujjwal);
+console.log(Vaibhav);  */
+
+//there is one more method, that is Constructor function;
+//in constructor function we need not to use "return"
+
+// function Person(height, weight){            //in constructor function we need to specify name with capital letter starting.
+//     this.height = height;                   //this keyword points to the thing in which it is kept. eg. in this case it is pointing to Person.
+//     this.weight = weight;
+// }
+
+// const Ujjwal = new Person(180,66);
+// console.log(Ujjwal);
+// console.log(Ujjwal.constructor);        //".constructor" will give the whole function that "Ujjwal" is using.
+
+// Ujjwal.age=22;          //can add properties to a particular object in midway as well.
+// console.log(Ujjwal);
+
+
+// function Hero(height, speed){
+//     this.height = height;
+//     this.speed = speed;
+// }
+
+// const ironman = new Hero(200,1000);
+// const ironman2 = ironman;    //here if we do it like this the ironman2 will be saved as a reference variable, so if we made any change it will reflect at both the variables.
+
+// console.log(ironman);
+// console.log(ironman2);
+
+// ironman2.weight = 400; 
+
+// console.log(ironman);                //here the value of both the variable will change.
+// console.log(ironman2);
+
+//to solve this problem we will use spread operator(...) , by using this operator the variable is not saved as a reference variable.
+//but its value is stored , so if we made any change in any variable it will be shown in that variable only.
+
+// ironman2 = {...ironman};
+// ironman2.weight = 400;
+
+// console.log(ironman);
+// console.log(ironman2);    //here the value of ironman2 will be changed only  not of the another variable.

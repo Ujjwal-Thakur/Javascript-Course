@@ -1,0 +1,139 @@
+//<<<<<<<<<<<<<------------------------------------Classes and Inheritanne--------------------------->>>>>>>>>>>>>
+
+// class Myclass {                      //creation of a class
+//     x = 10;
+//     y = 20;
+
+//     print(){
+//         console.log("printing...")
+//     }
+// }
+
+// obj1 = new Myclass();                //object of the class
+// obj1.print();
+// console.log(obj1);
+
+// class Myclass {
+//     constructor(a,b){                    //using constructor 
+//         this.x = a;
+//         this.y = b;
+//     }
+// }
+
+// obj1 = new Myclass(11,12);
+// console.log(obj1);
+
+class Myclass {
+
+    #x=100;             //"#" is used to make anything inside a class private whether it is a variable or a function.
+    #y=200;
+
+    constructor(a,b){
+        this.#x = a;
+        this.#y = b;
+    }
+    
+    getX(){
+        return this.#x;
+    }
+    getY(){
+        return this.#y;
+    }
+
+    setX(a){
+        this.#x = a;
+    }
+    setY(b){
+        this.#y= b;
+    }
+
+    print(){
+        console.log("printing the value of x: ", this.#x);
+    }
+}
+
+obj1 = new Myclass(11,12);
+console.log(obj1);
+obj1.print();
+
+console.log(obj1.getX());
+console.log(obj1.getY());
+obj1.setX(1111);
+obj1.setY(2222);
+console.log(obj1.getX());
+console.log(obj1.getY());
+
+/*
+    We can use "set" and "get" method as:
+    get getX(){
+        return this.#x;
+    }
+
+    and 
+
+    set setX(a){
+        this.#x = a;
+    }
+
+    if we use these keywords before a function then we don't need to use "()" while calling these functions,
+    we can simply call them as:
+
+    console.log(obj1.getX);
+    obj1.setX = 1111;
+*/
+
+//-----------------------Inheritance------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//"extends" keyword is used for inheritance...
+
+class Electronics{
+    #input;
+    #output;
+    #name;
+
+    constructor(input,output,name){
+        this.#input = input;
+        this.#output = output;
+        this.#name = name;
+    }
+
+    print(){
+        console.log(this.#name);
+        console.log(this.#input);
+        console.log(this.#output);
+    }
+}
+
+class Charger extends Electronics{
+    #type;
+
+    constructor(input, output, name, type){
+        super(input, output, name);                 //"super" keyword is used to access the properties of the parent class.
+        this.#type = type;
+    }
+
+    get printType(){
+        console.log("Charger type: ",this.#type);
+    }
+}
+
+class hardDisk extends Electronics{
+    #RPM;
+
+    constructor(input, output, name, rpm){
+        super(input, output, name);
+        this.#RPM = rpm;
+    }
+
+    get printRPM(){
+        console.log("Hard Disk RPM: ",this.#RPM);
+    }
+}
+
+const hardDisk1 = new hardDisk(100,200,"hp Hard_Disk",7500);
+hardDisk1.print();
+hardDisk1.printRPM;
+
+const dellCharger = new Charger(50, 100, "DELL", "type-C");
+dellCharger.print();
+dellCharger.printType;

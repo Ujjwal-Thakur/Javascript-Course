@@ -17,5 +17,7 @@
 </body>
 
 <!-- <script src="./index.js"></script> -->
+<script src="./index.js"></script>
 <script src="./part_2.js"></script>
+<script src="./part3.js"></script>
 </html>

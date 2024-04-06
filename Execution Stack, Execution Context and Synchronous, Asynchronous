@@ -1,0 +1,55 @@
+/*
+JavaScript is a "Single Threaded Synchronous" programming language.
+It means it can execute one line at a line.
+single threaded means execute one line at a time.
+Synchronous means "when one line is executed completely, then only the another line can execute."
+
+It basically works on the basis of  "Execution Stack" and "Execution Context".
+
+Execution Stack is a Stack that contains Execution contexts.
+The first execution context is always "Global Execution Context(GEC)."
+GEC contains all the globally scoped variables and functions (elements).
+
+The Execution Contexts (including GEC) has 2 phases/parts.
+Phase_1 is also known as "memory allocation" where memory is allocated to respective variables and other components.
+Phase_2 is known as "Code Execution" where the execution parts occurs.
+
+
+-------->>>>>>   "Asynchronous"
+But javascript can also be used as "asynchronous". That means performing multitasking.
+It can be done by 3 ways:
+1). Callback
+2). Promise
+3). Asych Await
+
+*/
+
+// It can work asynchronous as:
+
+alert("Click OK");      //Here this will appear first. and next line will execute when this line is executed completely.
+                        //means next line will not be executed untill user click Ok on the alert notification.
+
+console.log("This is Ujjwal Thakur");  //only after clicking OK; this line will be executed and the line will get printed on the console.
+
+//So this is the synchronous behaviour...
+
+//Now to make it asynchronous we can take example of "setTimeout()" function.
+//It is an asynchronous function, which can help js to work asynchronous.
+
+setTimeout(()=>{
+    alert("Click OK")
+},5000);
+
+console.log("this is asynchronous behaivour..,This will be printed before the alert...")
+
+//So here as the setTimeout function is asynchronous.
+//when we use setTimeout function  it knows that it will execute after the specified time automatically.
+//So the next line will be executed in-between. It will not wait for the setTimeout funtion to take its time.
+//That will automatically executed after the specified time...
+
+/* So this is the Asynchronous and Synchronous behaaviour of Javascript */
+// By default Js is a Single threaded Synchronous language.
+//But it can be used as Asynchronous by these methods.
+//--->> Callback
+//--->> Promise
+//--->> Asynch Await.
